@@ -1,6 +1,5 @@
 import 'dart:io';
-
-import 'Lista.dart';
+import 'lista.dart';
 
 void main(List<String> args) {
   print("Lista de contatos | V0.2");
