@@ -38,11 +38,19 @@ class Lista {
     print("Qual o contato qu voce que remover");
     String? rm = stdin.readLineSync()!;
 
-    rm = listaContatos.remove(rm);
+    listaContatos.containsKey(rm);
 
-    print("$rm Removido da lisda dos seus contatos\n");
+    if (listaContatos.containsKey(rm) == true) {
+      print("$rm existe na lista");
 
-    printList();
+      listaContatos.remove(rm);
+
+      print("$rm Removido da lisda dos seus contatos\n");
+
+      printList();
+    } else {
+      print("$rm nao existe na lista");
+    }
 
     duration();
     clear();
@@ -96,8 +104,8 @@ class Lista {
     stdout.write('\x1B[2J\x1B[0;0H');
   }
 
-  void duration() {
-    sleep(Duration(milliseconds: 790));
+  duration() {
+    sleep(Duration(milliseconds: 1000));
   }
 
   void printList() {
