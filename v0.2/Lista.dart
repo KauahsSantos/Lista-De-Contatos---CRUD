@@ -13,7 +13,7 @@ class Lista {
     print("6 | Sair\n");
   }
 
-  addContato() {
+  void addContato() {
     print("Digite o Nome");
     nome = stdin.readLineSync()!;
 
@@ -32,7 +32,7 @@ class Lista {
     clear();
   }
 
-  removeContato() {
+  void removeContato() {
     printList();
 
     print("Qual o contato qu voce que remover");
@@ -48,14 +48,14 @@ class Lista {
     clear();
   }
 
-  listContato() {
+  void listContato() {
     printList();
 
     sleep(Duration(seconds: 2));
     clear();
   }
 
-  updateContato() {
+  void updateContato() {
     printList();
 
     print("\nQual contato voce quer atualizar?");
@@ -74,7 +74,7 @@ class Lista {
     clear();
   }
 
-  buscarContato() {
+  void buscarContato() {
     print("Digite o nome do contato que voce que buscar:");
     nome = stdin.readLineSync()!;
 
@@ -92,15 +92,15 @@ class Lista {
     clear();
   }
 
-  clear() {
+  void clear() {
     stdout.write('\x1B[2J\x1B[0;0H');
   }
 
-  duration() {
+  void duration() {
     sleep(Duration(milliseconds: 790));
   }
 
-  printList() {
+  void printList() {
     listaContatos.forEach(((key, value) => print("$key | $value")));
   }
 }
