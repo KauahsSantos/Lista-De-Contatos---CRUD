@@ -1,6 +1,6 @@
 import 'dart:io';
 
-class Lista {
+class lista {
   String? nome, num;
   Map<String, String> listaContatos = {};
 
